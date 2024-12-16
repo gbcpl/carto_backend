@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 
   try {
     // Faire une requête à l'API Wikipedia pour récupérer l'extrait de la page
-    const response = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro&explaintext&titles=${id}`);
+    const response = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages&prop=extracts&exintro&explaintext&titles=${id}`);
 
     // Log pour voir la réponse brute de l'API Wikipedia
     console.log("Réponse de Wikipedia:", response.data);
